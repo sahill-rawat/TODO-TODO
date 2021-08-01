@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+
+    <title>TO-DO-To-DO</title>
+
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="todo.css">
+
+</head>
+<body style="background-color: #f0f2f5;">
+    
+    <nav class="navbar" style="background-color: white;">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            TO-DO-TO-DO</a>
+          <form class="d-flex">
+            <input class="form-control me-2 searchBar" type="search" placeholder="Search" aria-label="Search" oninput="searchfor()">
+          </form>
+        </div>
+      </nav>
+
+      <div id="content" class="container">
+          <div class="row"></div>
+      </div>
+    
+        <div class="adder">
+            <div class="task-adder hide">
+                <div class="input-group">
+                    <input type="text" id="tsk" class="form-control" placeholder="Enter a new Task." aria-label="Enter a new Task.">
+                    <button class="btn btn-dark add-to-storage" type="button">Add</button>
+                    <button class="btn btn-dark cl" type="button" aria-label="Close">Close</button>
+                  </div>
+            </div>
+            <div id="adder-btn">
+                <button type="button" class="btn btn-secondary btn-lg">Add Task</button>
+            </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>

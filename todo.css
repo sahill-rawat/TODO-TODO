@@ -1,0 +1,80 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.card {
+    display: inline-flex;
+    height: 40%;
+    margin: 3% 2% 2% 5%;
+}
+
+#content {
+    z-index: 0;
+    position: relative;
+    background-color: #ECFCFF;
+    display: flexbox;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+}
+
+.row::before {
+    background: url("./bg.jfif");
+    content: "";
+    position: absolute;
+    height: 100%; width: 100%;
+    z-index: -1;
+}
+
+
+.add {
+    height: 15%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: blueviolet;
+}
+
+.adder {
+    position: fixed;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto 0 auto;
+    align-items: center;
+}
+
+#adder-btn {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 651px) 
+{
+    .adder { width: 50%; }
+    .del { float: right; }
+}
+
+@media screen and (max-width: 650px)
+{
+    .adder { width: 80%; }
+}
+
+.hide { display: none; }
+
+.font-bold {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.row 
+{ 
+    height: 69vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.container-fluid { width: 100%; }
