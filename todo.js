@@ -17,16 +17,14 @@ function searchfor()
 {
     let str = $(".searchBar").val().trim().toLowerCase();
     if(str.length == 0) {showTasks();}
-    let array = document.querySelectorAll('.card');
+    let tasks = $('.card');
 
-        array.forEach(function(element) {
-        let temp = element.getElementsByTagName("p")[0];
-        let txt2 = temp.innerText.toLowerCase();
-        if(!txt2.includes(str))
-        {
-            element.style.display = "none";
+        for(let i=0; i<tasks.length; i++) {
+        let curr_p = $(tasks[i]).children(".card-body");
+        let curr_task = $(curr_p).children(".card-text");
+        let notes = curr_task[0].innerText.toLowerCase();
+        if(!notes.includes(str)) { tasks[i].style.display = "none"; }
         }
-    });
 }
 
 
